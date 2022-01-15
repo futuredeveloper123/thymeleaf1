@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:state="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h2 th:text="${vo}"></h2>-->
+<!--<h2 th:text="${vo1}"></h2>-->
+<!--<h2 th:text="${vo2}"></h2>-->
+<h2 id="vo"></h2>
+</body>
+<script th:inline="javascript">
+    let vo = [[${vo}]];
+    document.getElementById("vo").innerHTML=vo.sno;
+</script>
+</html>
