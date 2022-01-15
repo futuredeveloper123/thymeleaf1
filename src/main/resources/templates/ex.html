@@ -12,18 +12,18 @@
     </th:block>
 </ul>
 <ul>
-<!--    <li th:each="vo,state:${list}"-->
-<!--        th:class="${vo.sno % 5==0}?'target'"-->
-<!--        th:text="${vo}">-->
-<!--    </li>-->
+    <li th:each="vo, state:${list}"
+        th:class="${vo.sno % 5==0}?'target'"
+        th:text="${vo}">
+    </li>
 </ul>
-<!--<ul>-->
-<!--    <li th:each="vo, state:${list}">-->
-<!--    <span th:if="${vo.sno %5==0}"-->
-<!--          th:text="${vo.sno}"></span>-->
-<!--    <span th:unless="${vo.sno %5==0}"-->
-<!--          th:text="${vo.first}"></span>-->
-<!--    </li>-->
-<!--</ul>-->
+<ul>
+    <li th:each="vo, state:${list}">
+    <span th:if="${vo.sno %5==0}"
+          th:text="${vo.sno}"></span>
+    <span th:unless="${vo.sno %5==0}"
+          th:text="${vo.first}"></span>
+    </li>
+</ul>
 </body>
 </html>

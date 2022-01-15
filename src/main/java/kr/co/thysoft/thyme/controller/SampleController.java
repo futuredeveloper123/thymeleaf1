@@ -15,7 +15,7 @@ public class SampleController {
     @GetMapping("/")
     public String home(Model model){
         model.addAttribute(
-                "data","helloThyme"
+                "data","HelloThyme"
         );
         return "home";
     }
@@ -43,10 +43,10 @@ public class SampleController {
                 .last("soft")
                 .regTime(LocalDateTime.now())
                 .build();
-        //모델은 포워딩 할 대 사용
-        //model.addAttribute("vo",vo);
+       // 모델은 포워딩 할 대 사용
+        model.addAttribute("vo",vo);
         //이 경우는 세션이 소멸되거나 강제로 삭제할 때까지 유지
-        //session.setAttribute("vo1",vo);
+        session.setAttribute("vo1",vo);
         //한번의 이동에서만 데이터를 유지 - 자동 소멸
         rattr.addFlashAttribute("vo",vo);
         return "redirect:/ex1";
